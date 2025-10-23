@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Método de Proyecto — 10 pasos</title>
+  <meta name="description" content="Página con los 10 pasos del método de proyecto: clara, responsive y lista para usar." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#06b6d4; --muted:#9aa4b2; --glass: rgba(255,255,255,0.03);
+      --radius:14px; --fw-heading:700; --fw-body:400;
+    }
+    *{box-sizing:border-box}
+    body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:linear-gradient(180deg,#071124 0%, #0b1220 100%); color:#e6eef6; -webkit-font-smoothing:antialiased}
+    .container{max-width:1100px;margin:40px auto;padding:28px}
+    header{display:flex;align-items:center;gap:18px}
+    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#0ea5a0);display:flex;align-items:center;justify-content:center;font-weight:800;color:#042032}
+    h1{font-size:28px;margin:0}
+    p.lead{margin:8px 0 18px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:20px}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}.sidebar{order:2}}
+
+    /* cards */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.03); padding:18px;border-radius:12px;box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+
+    .steps{display:grid;gap:12px}
+    .step{display:flex;gap:14px;align-items:flex-start;padding:14px;border-radius:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.02)}
+    .num{background:linear-gradient(180deg,#071b24, #08303a);min-width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:16px;border:1px solid rgba(255,255,255,0.03)}
+    .step h3{margin:0;font-size:16px}
+    .step p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+    .sidebar .card{position:sticky;top:28px}
+    .cta{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    button{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 12px;border-radius:10px;color:inherit;cursor:pointer}
+    button.primary{background:var(--accent);color:#042032;border:none}
+
+    footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* simple collapsible */
+    .details{margin-top:10px}
+    summary{cursor:pointer;list-style:none}
+    details[open] summary::after{content:"▲";float:right}
+    summary::after{content:"▼";float:right}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">MP</div>
+      <div>
+        <h1>Método de Proyecto — 10 pasos</h1>
+        <p class="lead">Una guía práctica y ordenada con los 10 pasos esenciales para gestionar y ejecutar un proyecto con éxito.</p>
+      </div>
+    </header>
+
+    <main class="grid" role="main">
+      <section>
+        <div class="card">
+          <h2 style="margin-top:0">Los 10 pasos</h2>
+          <p class="lead" style="margin-bottom:12px">Haz clic en cualquier paso para ver una descripción más amplia.</p>
+
+          <div class="steps" id="steps">
+            <!-- 10 pasos -->
+            <details class="step details">
+              <summary class="step-head"><div class="num">1</div><div style="margin-left:6px"><h3>Definir la idea y el alcance</h3></div></summary>
+              <p>Clarifica el propósito del proyecto, objetivos SMART y qué quedará fuera del alcance. Documento: declaración de alcance.</p>
+            </details>
+
+            <details class="step details">
+              <summary class="step-head"><div class="num">2</div><div style="margin-left:6px"><h3>Investigación y análisis</h3></div></summary>
+              <p>Recopila información del contexto, stakeholders, usuarios y riesgos. Realiza benchmarking y análisis DAFO si procede.</p>
+            </details>
+
+            <details class="step details">
+              <summary class="step-head"><div class="num">3</div><div style="margin-left:6px"><h3>Planificación y roadmap</h3></div></summary>
+              <p>Crea el plan del proyecto: fases, entregables, hitos y calendario inicial. Define KPIs y criterios de éxito.</p>
+            </details>
+
+            <details class="step details">
+              <summary class="step-head"><div class="num">4</div><div style="margin-left:6px"><h3>Asignación de recursos</h3></div></summary>
+              <p>Asigna equipo, roles, presupuesto y herramientas. Asegura capacitación y disponibilidad de recursos clave.</p>
+            </details>
+
+            <details class="step details">
+              <summary class="step-head"><div class="num">5</div><div style="margin-left:6px"><h3>Diseño y prototipado</h3></div></summary>
+              <p>Genera wireframes, prototipos o diseños técnicos según sea necesario. Recoge feedback temprano de usuarios/stakeholders.</p>
+            </details>
+
+            <details class="step details">
+              <summary class="step-head"><div class="num">6</div><div style="margin-left:6px"><h3>Desarrollo e implementación</h3></div></summary>
+              <p>Ejecuta las tareas, desarrolla la solución y realiza integraciones. Mantén revisiones de código y control de calidad continuos.</p>
+            </details>
+
+            <details class="step details">
+              <summary class="step-head"><div class="num">7</div><div style="margin-left:6px"><h3>Pruebas y validación</h3></div></summary>
+              <p>Realiza pruebas (unitarias, integración, usuario) y valida que los entregables cumplen los criterios de aceptación.</p>
+            </details>
+
+            <details class="step details">
+              <summary class="step-head"><div class="num">8</div><div style="margin-left:6px"><h3>Despliegue y entrega</h3></div></summary>
+              <p>Prepara el entorno de producción, plan de lanzamiento y entrega oficial a los stakeholders o clientes.</p>
+            </details>
+
+            <details class="step details">
+              <summary class="step-head"><div class="num">9</div><div style="margin-left:6px"><h3>Monitoreo y seguimiento</h3></div></summary>
+              <p>Supervisa KPIs, rendimiento y feedback post-lanzamiento. Gestiona incidencias y optimizaciones necesarias.</p>
+            </details>
+
+            <details class="step details">
+              <summary class="step-head"><div class="num">10</div><div style="margin-left:6px"><h3>Cierre y lecciones aprendidas</h3></div></summary>
+              <p>Documenta resultados, entrega final, realiza una retrospectiva y registra mejoras para futuros proyectos.</p>
+            </details>
+
+          </div>
+        </div>
+
+        <footer>
+          © Método de Proyecto • Página generada automáticamente
+        </footer>
+      </section>
+
+      <aside class="sidebar">
+        <div class="card">
+          <h3>Resumen rápido</h3>
+          <p class="lead">10 pasos claros para guiar cualquier proyecto — desde la idea hasta el cierre.</p>
+          <div class="cta">
+            <button id="download">Descargar HTML</button>
+            <button class="primary" id="copy">Copiar al portapapeles</button>
+          </div>
+          <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:12px 0">
+          <h4>Consejos</h4>
+          <ul style="padding-left:18px;color:var(--muted);margin:6px 0">
+            <li>Mantén reuniones cortas y frecuentes.</li>
+            <li>Documenta decisiones clave.</li>
+            <li>Itera rápido y valida con usuarios.</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script>
+    // Descargar el HTML completo
+    document.getElementById('download').addEventListener('click', function(){
+      const html = '<!doctype html>' + document.documentElement.outerHTML;
+      const blob = new Blob([html],{type:'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = 'metodo-de-proyecto-10-pasos.html'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    });
+
+    // Copiar al portapapeles (texto simple con los 10 pasos)
+    document.getElementById('copy').addEventListener('click', async function(){
+      const steps = Array.from(document.querySelectorAll('.step h3')).map((h,i)=> (i+1)+'. '+h.innerText).join('\n');
+      try{
+        await navigator.clipboard.writeText(steps);
+        this.innerText = 'Copiado ✓';
+        setTimeout(()=> this.innerText = 'Copiar al portapapeles',2000);
+      }catch(e){
+        alert('No se pudo copiar automáticamente. Selecciona y copia manualmente.');
+      }
+    });
+  </script>
+</body>
+</html>
